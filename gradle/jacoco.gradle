@@ -1,9 +1,13 @@
-
-apply plugin: 'jacoco'
-
-jacoco {
-    toolVersion = "$jacocoVersion"
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'org.jacoco:org.jacoco.core:0.8.2'
+    }
 }
+apply plugin: 'jacoco'
+jacoco { toolVersion = '0.8.2' }
 
 tasks.withType(Test) {
     jacoco.includeNoLocationClasses = true
