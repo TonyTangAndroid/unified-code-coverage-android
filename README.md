@@ -16,11 +16,43 @@ A sample project showcase of how to merge the coverage data from both `androidTe
 [Blog Post](https://medium.com/android-dev-br/gerando-o-relat%C3%B3rio-de-cobertura-de-testes-unificado-com-jacoco-robolectric-e-espresso-c5f110dbf94f) (pt-BR)
 
 
+
+
+## How to run in the easy way :
+
+Just execute the script that I have created
+
+`sh ./report.sh`
+
+###Warning : You are required to connect a Android device or
+emulator because there will be android test included in this command.
+
+The following command is the one to execute your test case and generate the result.
+
+`./gradlew clean jacocoTestReport`
+
+The default result will be put under the following path.
+
+`./app/build/reports/jacoco/jacocoTestReport/html/index.html`
+
+Given the facts that I really hate to browse directory deeply to find something, so I write a script
+to copy the report under the project build folder and open the result within your default browser.
+
+(You are welcome)
+
+## Why the coverage is not 100%?
+I added a dummy method specifically to demonstrating what happens
+if you miss a method.You could safely remove it to make 100% as you wish.
+
+
 ## Trouble shooting
-In case you run into this kind of error, please add 
+In case you run into this kind of error when you run the test suite, please add 
 `-ea -noverify`
-to the VMOptions in the test. For more information, please refer to 
-[https://github.com/robolectric/robolectric/issues/3023#issuecomment-397166230] (this thread) 
+
+![Trouble Shooting](doc/trouble_shooting.png "Trouble Shooting")
+
+to the VMOptions in the test. For more information, please refer to
+[this thread](https://github.com/robolectric/robolectric/issues/3023#issuecomment-397166230)
 
 ```java.lang.VerifyError: Bad return type
  Exception Details:
