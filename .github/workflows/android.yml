@@ -12,7 +12,7 @@ jobs:
         uses: ReactiveCircus/android-emulator-runner@v2.2.0
         with:
           api-level: 29
-          script: ./gradlew connectedCheck
+          script: ./gradlew clean jacocoTestReport
       - uses: actions/checkout@master
       - uses: codecov/codecov-action@v1
         with:
