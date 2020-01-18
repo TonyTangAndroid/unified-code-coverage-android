@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       text.setText("Hello World!");
     } else {
       pojoMissed = new PojoMissed();
+      pojoMissed.setThing("test");
       text.setText(pojoMissed.getThing());
       v.setVisibility(View.GONE);
     }
