@@ -13,5 +13,3 @@ jobs:
         with:
           api-level: 29
           script: ./gradlew connectedCheck
-      - name: Generate report
-        run: sh ./report.sh
