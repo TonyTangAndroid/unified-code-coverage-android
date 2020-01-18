@@ -1,14 +1,14 @@
 package net.rafaeltoledo.coverage;
 
-public class PojoMissedUnitTest {
+public class PojoMissed {
 
-  private Object thing;
+  private String thing = "default string";
 
-  public Object getThing() {
+  public String getThing() {
     return thing;
   }
 
-  public void setThing(Object thing) {
+  public void setThing(String thing) {
     this.thing = thing;
   }
 
